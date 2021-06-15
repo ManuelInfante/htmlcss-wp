@@ -3,17 +3,45 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /* common */
 .container{
     width: 90%;
     margin: 2% auto;
 }
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
 /* / common */
 
-header{
-    height: 100px;
-    background-color: rgb(220, 130, 255);
+/* header e nav */
+
+header #logo img{
+    height: 70px;
+    padding-right: 20px;
+    border-right: 1px solid lightgray;
+    /* display: none; */
 }
+
+nav{
+    margin: 40px 0;
+}
+
+nav li {
+    display: inline;
+    list-style: none;
+    padding-right: 10px;
+}
+
+nav li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 17px;
+    color: rgb(153, 153, 153);
+}
+/* / header e nav */
+
 /* slider e colonne */
 main{
     margin: 10px 0 ;
@@ -45,28 +73,32 @@ main{
     height: 70px;
     background-color: cyan;
 }
+    /* colonne */
+    .columns_box{
+        padding: 20px 0;
+    }
 
-.columns_box{
-    padding: 20px 0;
-}
+    .columns_box div{
+        background-color: cyan;
+        padding: 10px;
+        float: left;
+    }
 
-.columns_box div{
-    background-color: cyan;
-    padding: 10px;
-    float: left;
-}
+    .columns_box > div:not(.middle_column){
+        width: calc(100% / 4);
+    }
 
-.columns_box > div:not(.middle_column){
-    width: calc(100% / 4);
-}
+    .middle_column{
+        width: calc((100% / 4)*2 - 20px);
+        margin: 0 10px;
+    }
+    /* / colonne */
 
-.middle_column{
-    width: calc((100% / 4)*2 - 20px);
-    margin: 0 10px;
-}
 /* / slider e colonne */
 
+/* footer */
 footer{
     height: 50px;
     background-color: purple;
 }
+/* /footer */
