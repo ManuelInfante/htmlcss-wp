@@ -13,7 +13,31 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
+
+.layover{
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.274);
+}
 /* / common */
+
+/* IMMAGINI E CONTENITORI GENERALI */
+
+.slider, .article_img{
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.slider img, .article_img > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* / IMMAGINI E CONTENITORI GENERALI  */
 
 /* header e nav */
 
@@ -48,23 +72,7 @@ main{
     /* slider */
 
     .slider{
-        position: relative;
         height: 550px;
-        border-radius: 25px;
-        overflow: hidden;
-    }
-
-    .slider img{
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .layover{
-        height: 100%;
-        position: absolute;
-        inset: 0;
-        background-color: rgba(0, 0, 0, 0.274);
     }
 
     .slide_text{
@@ -76,37 +84,43 @@ main{
         color: white;
     }
 
+    .slide_text > h2{
+        font-size: 30px;
+    }
+
     /* / slider */
 
     /* container colonne */
 
     .column_container{
-        background-color: rgb(24, 83, 194);
         margin: 30px  auto;
         padding-bottom: 20px;
     }
 
-    .column_container:after{
+    .column_container:after, .columns_box:after{
         content: "";
         display: table;
         clear: both;
     }
 
-    .column_container_header{
-        height: 70px;
-        width: 100%;
-        background-color: cyan;
+    .column_container_header > h1{
+        font-size: 35px;
+        font-weight: 600;
+    }
+
+    .column_container_header > p{
+        font-size: 15px;
+        font-weight: 400;
+        color: rgb(170, 170, 170);
     }
 
         /* colonne */
 
         .columns_box{
-            padding: 20px 0;
+            padding: 35px 0;
         }
 
-        .columns_box div{
-            background-color: cyan;
-            padding: 10px;
+        .columns_box > div{
             float: left;
         }
 
@@ -115,8 +129,24 @@ main{
         }
 
         .middle_column{
-            width: calc((100% / 4)*2 - 20px);
-            margin: 0 10px;
+            width: calc((100% / 4)*2 - 40px);
+            margin: 0 20px;
+        }
+
+        .article_img{
+            height: 250px;
+        }
+
+        .article_text > h3{
+            font-size: 20px;
+            font-weight: 400;
+            padding: 16px 0;
+        }
+
+        .article_text > p{
+            font-size: 20px;
+            font-weight: 200;
+            color: rgb(134, 134, 134);
         }
         /* / colonne */
 
