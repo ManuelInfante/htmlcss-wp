@@ -66,9 +66,7 @@ nav li a{
 /* / header e nav */
 
 /* slider e colonne */
-main{
-    margin: 10px 0 ;
-}
+
     /* slider */
 
     .slider{
@@ -156,7 +154,13 @@ main{
 
 /* footer */
 footer{
-    height: 50px;
-    background-color: purple;
+    text-align: center;
+    font-size: 17px;
+}
+
+footer:after{
+    content: "\2665";
+    font-size: 20px;
+    color: red;
 }
 /* /footer
