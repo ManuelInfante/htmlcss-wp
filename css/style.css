@@ -21,7 +21,6 @@ header #logo img{
     height: 70px;
     padding-right: 20px;
     border-right: 1px solid lightgray;
-    /* display: none; */
 }
 
 nav{
@@ -46,53 +45,82 @@ nav li a{
 main{
     margin: 10px 0 ;
 }
+    /* slider */
 
-.slider{
-    height: 350px;
-    background-color: rgb(204, 177, 109);
-    margin: 20px 0;
-}
-
-.column_container{
-    background-color: rgb(24, 83, 194);
-    margin: 0 auto;
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.column_container{
-    content: "";
-    display: table;
-    clear: both;
-    padding-bottom: 20px;
-}
-
-.box_header{
-    width: 100%;
-    height: 70px;
-    background-color: cyan;
-}
-    /* colonne */
-    .columns_box{
-        padding: 20px 0;
+    .slider{
+        position: relative;
+        height: 550px;
+        border-radius: 25px;
+        overflow: hidden;
     }
 
-    .columns_box div{
+    .slider img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .layover{
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.274);
+    }
+
+    .slide_text{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 50px;
+        width: 60%;
+        color: white;
+    }
+
+    /* / slider */
+
+    /* container colonne */
+
+    .column_container{
+        background-color: rgb(24, 83, 194);
+        margin: 30px  auto;
+        padding-bottom: 20px;
+    }
+
+    .column_container:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .column_container_header{
+        height: 70px;
+        width: 100%;
         background-color: cyan;
-        padding: 10px;
-        float: left;
     }
 
-    .columns_box > div:not(.middle_column){
-        width: calc(100% / 4);
-    }
+        /* colonne */
 
-    .middle_column{
-        width: calc((100% / 4)*2 - 20px);
-        margin: 0 10px;
-    }
-    /* / colonne */
+        .columns_box{
+            padding: 20px 0;
+        }
+
+        .columns_box div{
+            background-color: cyan;
+            padding: 10px;
+            float: left;
+        }
+
+        .columns_box > div:not(.middle_column){
+            width: calc(100% / 4);
+        }
+
+        .middle_column{
+            width: calc((100% / 4)*2 - 20px);
+            margin: 0 10px;
+        }
+        /* / colonne */
+
+    /* / container colonne */
 
 /* / slider e colonne */
 
@@ -101,4 +129,4 @@ footer{
     height: 50px;
     background-color: purple;
 }
-/* /footer */
+/* /footer
